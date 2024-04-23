@@ -17,6 +17,7 @@ import { SIMPLE_MODELS } from './global/constants.js';
 import { OpenAi } from './models/openai-model.js';
 import { OpenAiMod } from './models/openai-model-mod.js';
 import { Gemini } from './models/gemini-model.js';
+import { Groq } from './models/groq-model.js';
 import { ConfluenceLoader } from './loaders/confluence-loader.js';
 import { AdaEmbeddings } from './embeddings/ada-embeddings.js';
 import { CohereEmbeddings } from './embeddings/cohere-embeddings.js';
@@ -47,6 +48,7 @@ export {
     OpenAi,
     OpenAiMod,
     Gemini,
+    Groq,
     AdaEmbeddings,
     CohereEmbeddings,
     OpenAi3LargeEmbeddings,

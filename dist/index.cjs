@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.HuggingFace = exports.Mistral = exports.GeminiEmbeddings = exports.OpenAi3SmallEmbeddings = exports.OpenAi3LargeEmbeddings = exports.CohereEmbeddings = exports.AdaEmbeddings = exports.Gemini = exports.OpenAiMod = exports.OpenAi = exports.SIMPLE_MODELS = exports.BaseModel = exports.ConfluenceLoader = exports.SitemapLoader = exports.YoutubeSearchLoader = exports.YoutubeChannelLoader = exports.BaseLoader = exports.JsonLoader = exports.WebLoader = exports.PdfLoader = exports.YoutubeLoader = exports.TextLoader = exports.RAGApplicationBuilder = exports.RAGApplication = void 0;
+exports.HuggingFace = exports.Mistral = exports.GeminiEmbeddings = exports.OpenAi3SmallEmbeddings = exports.OpenAi3LargeEmbeddings = exports.CohereEmbeddings = exports.AdaEmbeddings = exports.Groq = exports.Gemini = exports.OpenAiMod = exports.OpenAi = exports.SIMPLE_MODELS = exports.BaseModel = exports.ConfluenceLoader = exports.SitemapLoader = exports.YoutubeSearchLoader = exports.YoutubeChannelLoader = exports.BaseLoader = exports.JsonLoader = exports.WebLoader = exports.PdfLoader = exports.YoutubeLoader = exports.TextLoader = exports.RAGApplicationBuilder = exports.RAGApplication = void 0;
 const rag_application_js_1 = require("./core/rag-application.cjs");
 Object.defineProperty(exports, "RAGApplication", { enumerable: true, get: function () { return rag_application_js_1.RAGApplication; } });
 const rag_application_builder_js_1 = require("./core/rag-application-builder.cjs");
@@ -33,6 +33,8 @@ const openai_model_mod_js_1 = require("./models/openai-model-mod.cjs");
 Object.defineProperty(exports, "OpenAiMod", { enumerable: true, get: function () { return openai_model_mod_js_1.OpenAiMod; } });
 const gemini_model_js_1 = require("./models/gemini-model.cjs");
 Object.defineProperty(exports, "Gemini", { enumerable: true, get: function () { return gemini_model_js_1.Gemini; } });
+const groq_model_js_1 = require("./models/groq-model.cjs");
+Object.defineProperty(exports, "Groq", { enumerable: true, get: function () { return groq_model_js_1.Groq; } });
 const confluence_loader_js_1 = require("./loaders/confluence-loader.cjs");
 Object.defineProperty(exports, "ConfluenceLoader", { enumerable: true, get: function () { return confluence_loader_js_1.ConfluenceLoader; } });
 const ada_embeddings_js_1 = require("./embeddings/ada-embeddings.cjs");

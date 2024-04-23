@@ -14,6 +14,7 @@ import { SIMPLE_MODELS } from './global/constants.js';
 import { OpenAi } from './models/openai-model.js';
 import { OpenAiMod } from './models/openai-model-mod.js';
 import { Gemini } from './models/gemini-model.js';
+import { Groq } from './models/groq-model.js';
 import { ConfluenceLoader } from './loaders/confluence-loader.js';
 import { AdaEmbeddings } from './embeddings/ada-embeddings.js';
 import { CohereEmbeddings } from './embeddings/cohere-embeddings.js';
@@ -22,4 +23,4 @@ import { OpenAi3SmallEmbeddings } from './embeddings/openai-3small-embeddings.js
 import { GeminiEmbeddings } from './embeddings/gemini-embeddings.js';
 import { Mistral } from './models/mistral-model.js';
 import { HuggingFace } from './models/huggingface-model.js';
-export { RAGApplication, RAGApplicationBuilder, TextLoader, YoutubeLoader, PdfLoader, WebLoader, JsonLoader, BaseLoader, YoutubeChannelLoader, YoutubeSearchLoader, SitemapLoader, ConfluenceLoader, BaseModel, SIMPLE_MODELS, OpenAi, OpenAiMod, Gemini, AdaEmbeddings, CohereEmbeddings, OpenAi3LargeEmbeddings, OpenAi3SmallEmbeddings, GeminiEmbeddings, Mistral, HuggingFace, };
+export { RAGApplication, RAGApplicationBuilder, TextLoader, YoutubeLoader, PdfLoader, WebLoader, JsonLoader, BaseLoader, YoutubeChannelLoader, YoutubeSearchLoader, SitemapLoader, ConfluenceLoader, BaseModel, SIMPLE_MODELS, OpenAi, OpenAiMod, Gemini, Groq, AdaEmbeddings, CohereEmbeddings, OpenAi3LargeEmbeddings, OpenAi3SmallEmbeddings, GeminiEmbeddings, Mistral, HuggingFace, };
