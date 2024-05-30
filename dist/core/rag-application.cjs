@@ -74,8 +74,7 @@ class RAGApplication {
         rag_embedding_js_1.RAGEmbedding.init(llmBuilder.getEmbeddingModel() ?? new index_js_1.OpenAi3SmallEmbeddings());
         if (!this.model)
             throw new SyntaxError('Model not set');
-        if (!this.vectorDb)
-            throw new SyntaxError('VectorDb not set');
+        // if (!this.vectorDb) throw new SyntaxError('VectorDb not set');
     }
     async embedChunks(chunks) {
         const texts = chunks.map(({ pageContent }) => pageContent);
@@ -87,8 +86,10 @@ class RAGApplication {
     async init() {
         await this.model.init();
         this.debug('Initialized LLM class');
-        await this.vectorDb.init({ dimensions: rag_embedding_js_1.RAGEmbedding.getEmbedding().getDimensions() });
-        this.debug('Initialized vector database');
+        if (!this.vectorDb) {
+            await this.vectorDb.init({ dimensions: rag_embedding_js_1.RAGEmbedding.getEmbedding().getDimensions() });
+            this.debug('Initialized vector database');
+        }
         if (this.cache) {
             await this.cache.init();
             this.debug('Initialized cache');

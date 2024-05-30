@@ -38,7 +38,7 @@ export class RAGApplication {
 
         RAGEmbedding.init(llmBuilder.getEmbeddingModel() ?? new OpenAi3SmallEmbeddings());
         if (!this.model) throw new SyntaxError('Model not set');
-        if (!this.vectorDb) throw new SyntaxError('VectorDb not set');
+        // if (!this.vectorDb) throw new SyntaxError('VectorDb not set');
     }
 
     private async embedChunks(chunks: Pick<Chunk, 'pageContent'>[]) {
@@ -54,8 +54,10 @@ export class RAGApplication {
         await this.model.init();
         this.debug('Initialized LLM class');
 
-        await this.vectorDb.init({ dimensions: RAGEmbedding.getEmbedding().getDimensions() });
-        this.debug('Initialized vector database');
+        if (!this.vectorDb) {
+            await this.vectorDb.init({ dimensions: RAGEmbedding.getEmbedding().getDimensions() });
+            this.debug('Initialized vector database');
+        }
 
         if (this.cache) {
             await this.cache.init();
